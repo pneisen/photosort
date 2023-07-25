@@ -128,7 +128,7 @@ func main() {
 				}
 
 			} else {
-				dateString := strconv.Itoa(tm.Year()) + "-" + tm.Month().String()
+				dateString := strconv.Itoa(tm.Year()) + "-" + strconv.Itoa(int(tm.Month()))
 				dateDirName := filepath.Join(toPath, dateString)
 
 				if !dirExists(dateDirName) {
